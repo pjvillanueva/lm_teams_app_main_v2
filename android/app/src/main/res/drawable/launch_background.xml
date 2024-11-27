@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    //sets the background color of the splash screen
+    <item android:drawable="@color/background_color" />
+
+    //sets the logo in the splash screen
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/logo" />
+    </item>
+</layer-list>

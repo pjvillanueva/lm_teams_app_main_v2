@@ -1,0 +1,9 @@
+{
+  "dart.lineLength": 100,
+  "[dart]": {
+    "editor.rulers": [
+      100
+    ]
+  },
+  "cmake.sourceDirectory": "D:/Work Related/@tuilder/lm_teams_app_main/linux"
+}

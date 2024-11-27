@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+	<application tools:replace="android:label" android:label="LE Teams" android:icon="@mipmap/logo" android:usesCleartextTraffic="true">
+		<!-- flutter_background_geolocation licence -->
+		<activity android:name=".MainActivity" android:launchMode="singleTask" android:theme="@style/LaunchTheme" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:hardwareAccelerated="true" android:windowSoftInputMode="adjustResize" android:exported= "true">
+			<meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@style/NormalTheme" />
+			<meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" android:resource="@drawable/launch_background" />
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<!-- Branch URI Scheme -->
+			<intent-filter>
+				<data android:scheme="myapp" />
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+			<!-- Branch App Links -->
+			<intent-filter android:autoVerify="true">
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="https" android:host="lm-teams-app.app.link" />
+				<data android:scheme="https" android:host="lm-teams-app-alternate.app.link" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+		<meta-data android:name="flutterEmbedding" android:value="2" />
+		<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_oj4Pfqi2r7BnySS3xbJwVjmmwyjofmUs" />
+		<meta-data android:name="io.branch.sdk.BranchKey.test" android:value="secret_live_8pwkMoPh6S3zEbVPL3YQY9Q7kdZcgITS" />
+		<meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAY22bOUROoeBh8uTEQh5XoJfbVfIl8JgA" />
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.SEND" />
+			<data android:mimeType="text/plain" />
+		</intent>
+	</queries>
+	<!-- Provide required visibility configuration for API level 30 and above -->
+	<queries>
+		<!-- If your app checks for SMS support -->
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="sms" />
+		</intent>
+		<!-- If your app checks for call support -->
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="tel" />
+		</intent>
+	</queries>
+</manifest>
